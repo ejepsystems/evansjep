@@ -22,3 +22,7 @@ The opening portrait follows the introductory copy on mobile and sits beside it 
 ## About photographic openings — 20 October 2026
 
 My Story uses the supplied monochrome mirror portrait. The original file is retained byte-for-byte as evans-jep-story-mono.webp; inline SVG viewBox crops only the surrounding white canvas. Layout crops vary by viewport, with a visible MrdPraem credit and original-image link. No AI alteration or facial retouching applied. Purpose & Principles uses the existing book photograph as a background. How I Build uses a WebP encoding of the blue-attire photograph in a separate editorial block. Original uploads are unchanged. Mobile hero height is viewport-aware, 420–520px; headline 32px, body 15px, minimum 44px anchor; local page links remain on a solid surface below the photograph. Desktop uses portrait placement on the right and a dark gradient behind left-aligned copy. No parallax or image entrance motion.
+
+## Full-image My Story revision
+
+The My Story hero now renders the complete original 1154×1536 monochrome image at its native aspect ratio. No viewBox crop, object-fit cover, dark overlay, or photographer-credit removal. Black text is positioned within the original right-hand white canvas (left 64%, right 4–5%), with compact mobile typography. Original visible watermark remains in the image. This supersedes the earlier cropped My Story opening. Purpose imagery remains unchanged.
