@@ -18,3 +18,7 @@ The opening portrait follows the introductory copy on mobile and sits beside it 
 ## Approved seated hero
 
 20 October 2026: user selected 6013.jpg after reviewing the mobile mockup. Homepage hero now uses evans-jep-reflection.jpg (also on Now). Mobile hero is edge-to-edge, 625px minimum (635px at narrow widths), with the supplied mirror composition and lower gradient. Opening location label removed. Existing biography locations remain.
+
+## About photographic openings — 20 October 2026
+
+My Story uses the supplied monochrome mirror portrait. The original file is retained byte-for-byte as evans-jep-story-mono.webp; inline SVG viewBox crops only the surrounding white canvas. Layout crops vary by viewport, with a visible MrdPraem credit and original-image link. No AI alteration or facial retouching applied. Purpose & Principles uses the existing book photograph as a background. How I Build uses a WebP encoding of the blue-attire photograph in a separate editorial block. Original uploads are unchanged. Mobile hero height is viewport-aware, 420–520px; headline 32px, body 15px, minimum 44px anchor; local page links remain on a solid surface below the photograph. Desktop uses portrait placement on the right and a dark gradient behind left-aligned copy. No parallax or image entrance motion.
