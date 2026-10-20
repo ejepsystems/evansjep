@@ -5,3 +5,12 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 .brand{min-height:44px;flex-shrink:0}.brand .brand-lockup{display:block;width:113.5px;height:30px;overflow:visible;color:var(--ink)}@media(min-width:800px){.brand .brand-lockup{width:121.04px;height:32px}}
+
+/* Photographic opening: restore the chosen direction with a compact action area. */
+.home-opening{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;gap:0;margin-inline:calc(-1 * var(--gutter));padding:24px var(--gutter);min-height:420px;min-height:clamp(400px,calc(100svh - var(--header) - 16px),540px);background:#111;color:#fff}
+.home-opening .home-photo{position:absolute;inset:0;z-index:-2;height:100%;width:100%;border-radius:0;margin:0;background:#111}
+.home-opening .home-photo img{object-position:60% 25%;height:100%;width:100%;object-fit:cover}
+.home-opening:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 25%,rgba(0,0,0,.1) 42%,rgba(0,0,0,.88) 75%,#111 100%);pointer-events:none}
+.home-opening .home-copy{width:100%;max-width:380px;order:0}.home-opening .eyebrow{color:#ddd;font-size:9px;margin-bottom:8px}.home-opening h1{font-size:28px;line-height:1.12;margin-bottom:8px}.home-opening .home-disciplines{color:#fff;font-size:16px;line-height:1.4;margin-bottom:0;max-width:28ch}
+.home-opening .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.home-opening .actions a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:10px 8px;font:13px/1.4 var(--ui);border:1px solid #ffffff90;border-radius:3px;color:#fff;text-decoration:none}.home-opening .actions .button{background:#fff;color:#111;border-color:#fff}.home-opening .actions a:focus-visible{outline:2px solid #fff;outline-offset:4px}.home-introduction{max-width:64ch;margin-bottom:20px}.home-introduction p{color:var(--ink)}
+@media(min-width:800px){.home-opening{min-height:560px;margin-inline:0;padding:40px;align-items:flex-start}.home-opening .home-photo img{object-position:60% 35%}.home-opening:after{background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.15) 68%),linear-gradient(0deg,rgba(0,0,0,.55),transparent 60%)}.home-opening h1{font-size:34px}.home-opening .home-disciplines{font-size:18px}.intro-section .home-introduction{grid-column:1/-1;max-width:64ch;margin-bottom:16px}}
