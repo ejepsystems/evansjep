@@ -7,7 +7,7 @@ for(const file of htmlFiles){
  assert.equal((html.match(/<h1>/g)||[]).length,1,file);
  assert(html.includes('id="main"'));assert(html.includes('noindex,nofollow'));
  assert(!/\[(?:Confirm|Project|Article|Date|Actual)|Editorial draft|Last updated:|EDITORIAL DRAFT/.test(html),'Editorial leak: '+file);
- assert(html.includes('Biography & Press'));
+ assert(html.replaceAll('&amp;','&').includes('Biography & Press'));
  for(const m of html.matchAll(/(?:href|src)="(\/[^"#]*)"/g)){const target=m[1];await access(target==='/'?'dist/index.html':`dist${target}${target.includes('.')?'':'.html'}`);links++;}
  for(const m of html.matchAll(/href="#([^"]+)"/g))assert(html.includes(`id="${m[1]}"`),`Missing fragment ${m[1]}: ${file}`);
  const nav=html.match(/<nav id="navigation"[\s\S]*?<\/nav>/)[0];
@@ -21,3 +21,5 @@ const now=await readFile('dist/now.html','utf8');assert(!now.includes('20 Octobe
 const contact=await readFile('dist/contact.html','utf8');for(const url of ['mailto:realevansjep@gmail.com','https://wa.me/2347088603467','https://www.tiktok.com/@evansjep','https://x.com/realevansjep'])assert(contact.includes(url));
 const press=await readFile('dist/media.html','utf8');assert(!press.includes('download='));assert(press.includes('Extended biography'));
 console.log(`Verified ${htmlFiles.length} pages and ${links} internal asset/navigation links, fragments, content exclusions, contacts and metadata.`);
+
+const home=await readFile('dist/index.html','utf8');const homeMain=home.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1];assert(homeMain.includes('Explore my work'));assert(homeMain.includes('href="/ventures"'));for(const unwanted of ['Quincestone','Emperor Armani','Jeclazon','selected-work','writing-preview','intro-section'])assert(!homeMain.includes(unwanted),'Homepage content isolation: '+unwanted);
