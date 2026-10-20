@@ -11,3 +11,9 @@ Design: restrained serif editorial text, native system navigation/metadata, 28px
 All private editorial information remains out of dist/. Only assets used by the site are copied. No product-level functionality or form was added.
 
 Release: private review only. No merge or production promotion without explicit approval.
+
+
+## Original writing collection — 21 October 2026
+`src/articles.mjs` stores nine original editorials separately from layout, with explicit publication dates, summaries, topic labels, sections and source links. These dates record this publication, never the build clock. The generator produces a chronological index and nine /writing/:slug pages with a narrow reading column. Writing navigation remains current on article routes. The homepage contains no article previews.
+
+The legacy editorial archive remains private and ungenerated. Tests whitelist only the nine authorised article routes and reject accidental public editorial files. Total output is now 19 HTML pages including 404.

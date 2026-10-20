@@ -1,5 +1,6 @@
 import {readdir,readFile,access} from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import {articles} from '../src/articles.mjs';
 async function files(dir){const out=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=`${dir}/${e.name}`;out.push(...e.isDirectory()?await files(p):[p]);}return out;}
 const all=await files('dist'),htmlFiles=all.filter(x=>x.endsWith('.html'));let links=0;
 for(const file of htmlFiles){
@@ -13,10 +14,10 @@ for(const file of htmlFiles){
  const nav=html.match(/<nav id="navigation"[\s\S]*?<\/nav>/)[0];
  assert(!nav.includes('↗'));assert(!nav.includes('/media'));assert(nav.includes('About'));
 }
-assert.equal(htmlFiles.length,10);assert(!all.some(x=>/dist\/(writing\/|editorial\/)/.test(x)));
+assert.equal(htmlFiles.length,10+articles.length);assert(!all.some(x=>/dist\/editorial\//.test(x)));const articleFiles=all.filter(x=>x.startsWith('dist/writing/'));assert.deepEqual(articleFiles.sort(),articles.map(a=>'dist/writing/'+a.slug+'.html').sort());
 const story=await readFile('dist/about.html','utf8');assert(story.includes('width="1154" height="1536"'));assert(!story.includes('viewBox="6 0 690'));
 const how=await readFile('dist/about/approach.html','utf8');assert(!how.includes('/photos/'));
-const writing=await readFile('dist/writing.html','utf8');assert(writing.includes('The first notes are taking shape.'));assert(!writing.includes('information-before-interface'));
+const writing=await readFile('dist/writing.html','utf8');assert(writing.includes('Notes on building.'));for(const a of articles){assert(writing.includes('/writing/'+a.slug));const page=await readFile('dist/writing/'+a.slug+'.html','utf8');assert(page.includes('datetime="2026-10-21"'));assert(page.includes('Back to writing'));assert(page.includes('aria-current="page"'));assert(a.sections.every(s=>s.paragraphs.length>=2));}assert(!writing.includes('information-before-interface'));
 const now=await readFile('dist/now.html','utf8');assert(!now.includes('20 October'));assert(!now.includes('Last updated'));
 const contact=await readFile('dist/contact.html','utf8');for(const url of ['mailto:realevansjep@gmail.com','https://wa.me/2347088603467','https://www.tiktok.com/@evansjep','https://x.com/realevansjep'])assert(contact.includes(url));
 const press=await readFile('dist/media.html','utf8');assert(!press.includes('download='));assert(press.includes('Extended biography'));
