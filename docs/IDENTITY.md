@@ -22,4 +22,8 @@ Vector implementation of the approved angular falcon concept paired with a Sourc
 
 ## Release
 
-Protected Vercel preview only. Existing draft content and unverified biography/venture facts remain clearly marked. No production promotion.
+Production deployment authorized on 20 October 2026; retain existing Vercel protection. Existing draft content and unverified biography/venture facts remain clearly marked. Publish after build, link, contrast and navigation behaviour checks.
+
+## Mobile navigation
+
+72px sticky opaque header. Numbered full-width navigation panel below 1050px; current-page accent, dividers, animated menu glyph and appearance control inside panel. Escape closes and restores focus; focus cycles in open navigation, background is inert, scroll is locked. Compact tabs above 1050px. Full-width mobile primary action and current-focus section.
