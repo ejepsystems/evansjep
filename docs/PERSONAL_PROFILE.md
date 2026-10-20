@@ -57,3 +57,10 @@ WhatsApp: +234 708 860 3467
 Link: https://wa.me/2347088603467
 
 Prepared from the user’s supplied account, 20 October 2026. Sections 4 and 5 were interpreted from the duplicated section-number request. No formal founder/CEO titles, qualifications, operational scale or commercial results have been added.
+
+## Official social accounts — supplied 20 October 2026
+
+- TikTok: https://www.tiktok.com/@evansjep
+- X: https://x.com/realevansjep
+
+Account ownership confirmed by the user. Stored for future website and profile updates.
