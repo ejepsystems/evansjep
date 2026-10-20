@@ -1,29 +1,23 @@
-# Evans Jep — Editorial Authority
+# Evans Jep identity — revised 20 October 2026
 
-Applied design direction, 20 October 2026.
+## Reference and typography
 
-## Typography
+The Neptlium screenshot is the visual reference for a traditional Times-style serif. Source Serif 4 and Inter have been removed. All text uses `"Times New Roman", Times, serif`, with regular 400 and bold 700. No third-party font request is required. This matches the requested font category; the exact font file in the screenshot has not been verified. Native serif fallback can differ between operating systems.
 
-Source Serif 4 for headings, editorial text and wordmark. Weight 600 for headings, 400 body and true italic. Optical sizing auto. Inter 400/500/600 for utility text. Font files currently served by Google Fonts with swap rendering and Georgia/Arial fallbacks; no local font files are bundled.
+Mobile: hero 38px (36px at narrow widths), page title 36px, section heading 29px, card title 23px, introduction 19px, body 18px, menu 16px, controls 14–15px, labels 11–13px. Upright bold headings; no oversized italic emphasis.
 
-Desktop/mobile sizes: hero 88/48; page heading 64/40; section 44/32; card 28/24; intro 24/21; body 20/18; navigation and buttons 14; caption 12; eyebrow 11. Hero tracking -.035em; headings -.025em; eyebrows .16em. Text measure up to 68ch.
+## Palette
 
-## Themes
+Obsidian #111210; ivory #F2EEE5; champagne #C5AC78. Light mode uses ivory background, forest #182019 text, and #755C2B accent. Preserve remembered appearance choice.
 
-Default obsidian #111210; surface #191B17; text #F2EEE5; secondary #B6B8AC; divider #3B4035; accent #C5AC78. Ivory theme: canvas #F2EEE5; surface #E8E5DC; text #182019; secondary #555E50; divider #C5C9BC; accent #755C2B. Theme preference persists locally, with graceful operation when storage is unavailable.
+## Navigation
 
-## Mark
+Mobile: 64px sticky header, compact right-aligned menu panel (310px maximum), two columns and three rows, 44px minimum touch targets, appearance control in a slim bottom row. No numbering or large menu captions. Desktop uses horizontal links. Escape, focus cycling, background inert and reduced-motion support remain.
 
-Vector implementation of the approved angular falcon concept paired with a Source Serif 4 Semibold wordmark. Large motif replaces the original architectural graphic. Simplified solid falcon favicon. The concept remains subject to final logo refinement, not represented as trademark-cleared artwork.
+## Homepage
 
-## Motion and accessibility
-
-600ms falcon arrival; 480ms once-only section entrance; 160ms hover feedback; cubic-bezier(.22,1,.36,1). Content remains visible without JavaScript. Reduced-motion preferences disable movement. Theme/menu controls use native buttons, keyboard focus and accessible labels; Escape dismisses mobile navigation. Minimum 44px controls.
+Concise introduction, two actions, three selected venture rows, short perspective statement, two clearly labelled editorial draft links, and contact. Remove the large decorative falcon panel and repeated generic positioning sections. Retain the small falcon wordmark and favicon.
 
 ## Release
 
-Production deployment authorized on 20 October 2026; retain existing Vercel protection. Existing draft content and unverified biography/venture facts remain clearly marked. Publish after build, link, contrast and navigation behaviour checks.
-
-## Mobile navigation
-
-72px sticky opaque header. Numbered full-width navigation panel below 1050px; current-page accent, dividers, animated menu glyph and appearance control inside panel. Escape closes and restores focus; focus cycles in open navigation, background is inert, scroll is locked. Compact tabs above 1050px. Full-width mobile primary action and current-focus section.
+Production updates authorized. Verify generated links, numbering removal, typography declarations, menu behaviour and deployed routes. Visual real-device review remains necessary; do not claim an exact font-file match from a screenshot alone.

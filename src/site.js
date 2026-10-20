@@ -1,6 +1,6 @@
 const toggle = document.querySelector('.menu');
 const navigation = document.querySelector('#navigation');
-const narrow = matchMedia('(max-width: 1050px)');
+const narrow = matchMedia('(max-width: 799px)');
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
 function setMenu(open, restoreFocus = false) {
@@ -26,7 +26,7 @@ document.addEventListener('keydown',event=>{
 });
 narrow.addEventListener('change',()=>{if(!narrow.matches)setMenu(false);});
 const appearance=document.querySelector('.theme-toggle');
-function syncAppearance(){const light=document.documentElement.dataset.theme==='light';appearance.textContent=light?'Obsidian theme':'Ivory theme';appearance.setAttribute('aria-pressed',String(light));appearance.setAttribute('aria-label',light?'Switch to obsidian theme':'Switch to ivory theme');document.querySelector('meta[name="theme-color"]').content=light?'#f2eee5':'#111210';}
+function syncAppearance(){const light=document.documentElement.dataset.theme==='light';appearance.textContent=light?'Obsidian':'Ivory';appearance.setAttribute('aria-pressed',String(light));appearance.setAttribute('aria-label',light?'Switch to obsidian theme':'Switch to ivory theme');document.querySelector('meta[name="theme-color"]').content=light?'#f2eee5':'#111210';}
 syncAppearance();
 appearance.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';try{localStorage.setItem('evans-jep-theme',light?'light':'dark');}catch{}syncAppearance();});
 if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('reveal');observer.unobserve(entry.target);}}},{threshold:.1});document.querySelectorAll('section').forEach(section=>observer.observe(section));}
