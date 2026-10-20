@@ -17,3 +17,7 @@ Compact 304px maximum panel with two columns, no decorative numbering. Dynamic v
 ## Verification limits
 
 Build, link, markup and interaction checks are available. Real rendered viewport, operating-system font fallback and text enlargement need browser/device review; source checks are not represented as visual certification.
+
+## Monochrome refinement
+
+Brown/champagne removed. Black #111210 is the light-theme accent; ivory #F2EEE5 is the dark-theme accent. Stylesheet consolidated into component definitions and two responsive ranges. Scroll-triggered content animation removed to preserve reading stability. Menu motion alone remains, respecting reduced-motion preferences. Keyboard focus, Escape, outside dismissal, breakpoint reset and stored theme checked.

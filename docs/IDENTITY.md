@@ -8,7 +8,7 @@ Mobile: hero 38px (36px at narrow widths), page title 36px, section heading 29px
 
 ## Palette
 
-Obsidian #111210; ivory #F2EEE5; champagne #C5AC78. Light mode uses ivory background, forest #182019 text, and #755C2B accent. Preserve remembered appearance choice.
+Obsidian #111210; ivory #F2EEE5; monochrome accents. Light mode uses ivory background, forest #182019 text, and black #111210 accent. Preserve remembered appearance choice.
 
 ## Navigation
 
@@ -21,3 +21,7 @@ Concise introduction, two actions, three selected venture rows, short perspectiv
 ## Release
 
 Production updates authorized. Verify generated links, numbering removal, typography declarations, menu behaviour and deployed routes. Visual real-device review remains necessary; do not claim an exact font-file match from a screenshot alone.
+
+## Current palette authority
+
+Black accents on ivory; ivory accents on obsidian. No brown/champagne highlights. This supersedes earlier palette proposals.
