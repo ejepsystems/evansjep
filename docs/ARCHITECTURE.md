@@ -21,3 +21,7 @@ Dependency-free static generation with Node, responsive CSS and progressively en
 ## Next approved content inputs
 
 Full biography and exact professional title; real portrait with permission; business email; verified social URLs; venture relationship and development stage; approved essays and actual media appearances.
+
+## About and work revision — 20 October 2026
+
+13 static pages. About routes: /about (My Story), /about/purpose (Purpose & Principles), /about/approach (How I Build). Shared disclosure navigation and local section links. Homepage and /ventures use the same selected-work component with independent brand panels and direct verified website destinations. Brand SVG assets are copied from src/brands to dist/brands. The Evans Jep wordmark uses outlined paths for consistent rendering.

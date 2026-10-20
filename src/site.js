@@ -9,16 +9,17 @@ function setMenu(open, restoreFocus = false) {
   navigation.classList.toggle('open', open);
   document.body.classList.toggle('menu-open', open);
   main.inert = open; footer.inert = open;
-  if(open) navigation.querySelector('a').focus();
-  else if(restoreFocus) toggle.focus();
+  if(open) navigation.querySelector('button, a').focus();
+  else {setAbout(false);if(restoreFocus) toggle.focus();}
 }
 toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
 navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
 document.addEventListener('keydown',event=>{
+  if(event.key==='Escape' && aboutToggle.getAttribute('aria-expanded')==='true'){event.preventDefault();setAbout(false);aboutToggle.focus();return;}
   if(toggle.getAttribute('aria-expanded')!=='true') return;
   if(event.key==='Escape'){setMenu(false,true);return;}
   if(event.key==='Tab'){
-    const controls=[toggle,...navigation.querySelectorAll('a,button')];
+    const controls=[toggle,...navigation.querySelectorAll('a,button')].filter(el=>!el.closest('[hidden]'));
     const first=controls[0],last=controls.at(-1);
     if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
     else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
@@ -30,3 +31,10 @@ function syncAppearance(){const light=document.documentElement.dataset.theme==='
 syncAppearance();
 appearance.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';try{localStorage.setItem('evans-jep-theme',light?'light':'dark');}catch{}syncAppearance();});
 document.addEventListener('pointerdown',event=>{if(toggle.getAttribute('aria-expanded')==='true'&&!navigation.contains(event.target)&&!toggle.contains(event.target))setMenu(false,true);});
+
+const aboutToggle=document.querySelector('.about-toggle');
+const aboutDropdown=document.querySelector('#about-navigation');
+function setAbout(open){aboutToggle.setAttribute('aria-expanded',String(open));aboutDropdown.hidden=!open;}
+aboutToggle.addEventListener('click',()=>setAbout(aboutToggle.getAttribute('aria-expanded')!=='true'));
+document.addEventListener('pointerdown',event=>{if(!event.target.closest('.about-nav'))setAbout(false);});
+document.addEventListener('focusin',event=>{if(!event.target.closest('.about-nav'))setAbout(false);});

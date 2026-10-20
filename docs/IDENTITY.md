@@ -25,3 +25,13 @@ Production updates authorized. Verify generated links, numbering removal, typogr
 ## Current palette authority
 
 Black accents on ivory; ivory accents on obsidian. No brown/champagne highlights. This supersedes earlier palette proposals.
+
+## Approved About and work architecture — 20 October 2026
+
+About now has three destinations: My Story (/about), Purpose & Principles (/about/purpose), How I Build (/about/approach). Personal history, faith/principles, and practice live separately, with shared local navigation. The disclosure is a real button with aria-expanded, hidden submenu, outside/focus dismissal, and Escape handling. Mobile links have 48px touch targets. Main-menu focus cycling excludes hidden links.
+
+The header wordmark is an outlined SVG using Nimbus Roman Bold, a Times-style serif, with adjusted spacing. This freezes the wordmark drawing across devices; body copy retains the native Times stack. Falcon remains a simple single-colour vector. Mobile lockup uses a 128px wordmark plus 23px falcon; desktop 155px wordmark. No shadow, glow or bevel.
+
+Selected work uses branded editorial panels rather than screenshots. Do not label them screenshots: they pair verified site wording with a brand surface. Quincestone logo downloaded from https://www.quincestone.com/quincestone-logo.svg; Emperor Armani logo from https://emperor-armani-web-clesla.vercel.app/brand/emperor-armani-horizontal-dark.svg; Jeclazon live site uses a text wordmark. Jeclazon's Arial fallback is used in the panel rather than inventing a symbol. These logos are retained under src/brands. Quincestone leads on desktop, followed by two features; mobile is single column. Links use verified sites, with a note that Vercel previews may require access. No authentication bypass links are published.
+
+This section supersedes earlier descriptions of the homepage venture rows, two-part About, and text-rendered header wordmark.
