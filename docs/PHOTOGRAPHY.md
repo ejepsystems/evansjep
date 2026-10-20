@@ -14,3 +14,7 @@ The opening portrait follows the introductory copy on mobile and sits beside it 
 ## Background hero revision
 
 6012.jpg is displayed as the landing hero background with a dark CSS gradient. Mobile: photo above the lower copy area, 620px minimum hero (640px on the narrowest phones); desktop: text left, portrait right. No bitmap edits. Mobile headline 32–34px, purpose 18px, supporting copy 14px; general reading text 17px. Image crop remains subject to visual device review.
+
+## Approved seated hero
+
+20 October 2026: user selected 6013.jpg after reviewing the mobile mockup. Homepage hero now uses evans-jep-reflection.jpg (also on Now). Mobile hero is edge-to-edge, 625px minimum (635px at narrow widths), with the supplied mirror composition and lower gradient. Opening location label removed. Existing biography locations remain.
