@@ -50,3 +50,9 @@
 .site-footer .footer-base>a:last-child{order:1;justify-self:end}
 @media(max-width:359px){.home-opening .actions{gap:4px 12px}.home-opening .actions a:not(.button){padding-inline:4px}}
 @media(min-width:800px){.home-opening .home-photo img{object-position:60% 35%}.home-opening:after{background:linear-gradient(90deg,rgba(0,0,0,.83),rgba(0,0,0,.12) 68%),linear-gradient(0deg,#080808,transparent 60%)}.site-footer{margin-top:20px;padding-top:32px}.site-footer .footer-grid{gap:40px}.site-footer .footer-base{grid-template-columns:1fr auto 1fr}.site-footer .footer-base>.footer-link{grid-column:auto;order:1;justify-self:center}.site-footer .footer-base>a:last-child{order:2}.writing-entry{padding-block:26px}}
+
+/* Approved navigation vocabulary and distinct social/contact groups. */
+.site-footer .footer-identity p{max-width:26ch;font:11px/1.65 var(--ui)}
+.site-footer .footer-invitation>h2{margin:0;max-width:18ch}
+@media(max-width:799px){.site-footer .footer-direct{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;column-gap:24px}.site-footer .footer-direct h2{grid-column:1/-1}.site-footer .footer-direct a{justify-self:start}.site-footer .footer-invitation{flex-wrap:wrap;gap:12px 24px}}
+@media(min-width:800px){.site-footer .footer-grid{grid-template-columns:1.45fr 1fr .75fr .85fr;gap:32px}}
