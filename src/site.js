@@ -26,6 +26,6 @@ document.addEventListener('keydown',event=>{
 document.addEventListener('pointerdown',event=>{if(!event.target.closest('.about-nav'))setAbout(false);if(toggle.getAttribute('aria-expanded')==='true'&&!navigation.contains(event.target)&&!toggle.contains(event.target))setMenu(false,true);});
 document.addEventListener('focusin',event=>{if(!event.target.closest('.about-nav'))setAbout(false);});
 narrow.addEventListener('change',()=>setMenu(false));
-function syncAppearance(){const dark=document.documentElement.dataset.theme==='dark';appearance.textContent=dark?'Light':'Dark';appearance.setAttribute('aria-pressed',String(dark));appearance.setAttribute('aria-label',dark?'Switch to light appearance':'Switch to dark appearance');document.querySelector('meta[name="theme-color"]').content=dark?'#111210':'#faf9f6';}
-appearance.addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('evans-jep-theme',theme);}catch{}syncAppearance();});
+function syncAppearance(){const dark=document.documentElement.dataset.theme==='dark';appearance.textContent=dark?'Light':'Dark';appearance.setAttribute('aria-pressed',String(dark));appearance.setAttribute('aria-label',dark?'Switch to light appearance':'Switch to dark appearance');document.querySelector('meta[name="theme-color"]').content=dark?'#080808':'#ffffff';}
+appearance.addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('evans-jep-appearance-v2',theme);}catch{}syncAppearance();});
 syncAppearance();

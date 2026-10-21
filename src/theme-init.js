@@ -1,1 +1,1 @@
-try { const theme=localStorage.getItem('evans-jep-theme'); if(theme==='dark'||theme==='light')document.documentElement.dataset.theme=theme; } catch {}
+try { const theme=localStorage.getItem('evans-jep-appearance-v2'); document.documentElement.dataset.theme=theme==='light'?'light':'dark'; } catch { document.documentElement.dataset.theme='dark'; }
