@@ -4,7 +4,7 @@ Existing project: ejepsystems/evansjep. Dependency-free Node static generator.
 
 ## Work locally
 
-Run npm run build and npm test from this directory. Output: dist/. The generated site has 10 HTML pages, with clean routes on Vercel. No editorial directory is copied to the output.
+Run npm run build and npm test from this directory. Output: dist/. The generated site has 20 HTML pages, with clean routes on Vercel. No editorial directory is copied to the output.
 
 ## Source
 
@@ -18,8 +18,8 @@ Run npm run build and npm test from this directory. Output: dist/. The generated
 
 ## Release boundary
 
-Current instruction supersedes earlier production approval: local/private preview only. No merge, public publication or production promotion. The private preview is uploaded directly from generated files; public GitHub main is unchanged. Preserve Vercel Authentication and noindex. The preview uses empty build/install commands only for its already-built output; repository Vercel build configuration remains npm run build.
+Use the existing review/evans-jep-final-identity branch and preserve unrelated work. Current conversation authorizes production updates; do not merge to main or weaken Vercel Authentication. Keep noindex settings. Only explicitly selected public source/assets belong in GitHub commits; editorial/, private archives and credentials remain local and excluded from generated output.
 
 ## Validation
 
-See editorial/VALIDATION.md and editorial/CONTENT_REVIEW.md in the private review package. Browser control was unavailable; do not describe the site as visually certified on mobile or desktop.
+See editorial/VALIDATION.md and editorial/CONTENT_REVIEW.md in the private review package. Record actual viewport coverage; do not describe HTTP or DOM-model tests as rendered browser certification.

@@ -1,19 +1,15 @@
-# Current Evans Jep architecture
+# Evans Jep architecture
 
-Authority: user implementation directive and attached Evans-Jep-Website-Copy-Deck.md. The original deck and private review record stay in editorial/, excluded from generated output and public GitHub pushes.
+Dependency-free Node static generator in ejepsystems/evansjep. Public content lives in src/content.mjs, src/projects.mjs and src/articles.mjs; scripts/build.mjs supplies the shared page shell and explicit asset allowlist.
 
-Primary navigation: About disclosure, Work, Writing, Now, Contact. Home via wordmark. About pages: /about, /about/purpose, /about/approach. Work retains /ventures; Biography & Press retains /media and is linked only from the footer.
+Primary navigation: About disclosure, Pectrium, Insights, Focus, Contact. Pectrium retains /ventures, with its company profile at /work/pectrium. About routes remain /about, /about/purpose and /about/approach; Biography & Media remains /media. Nine original essays are generated beneath /writing. Total: 20 HTML pages, including 404.
 
-Ten generated HTML files including 404. Writing has the supplied empty state. No draft article paths are generated. No invented dates, roles, stages or project detail pages. No downloadable press portraits until permissions/credits are confirmed. User-supplied email, WhatsApp, TikTok and X links are public.
+Pectrium is the only company showcased. Evans Jep’s CEO role and Pectrium positioning are supplied by the user. Earlier company/project pages are no longer generated; legacy paths redirect to /work/pectrium. Earlier case-study copy is retained only in the private editorial archive. This website does not establish legal transfers or corporate ownership of other ventures.
 
-Design: restrained serif editorial text, native system navigation/metadata, 28px mobile titles, 23px section headings, 15.5px body; modest desktop scaling. Default light theme, remembered appearance selection. My Story retains the full original monochrome image; black copy sits below it on mobile and in its right white canvas at >=800px. Purpose page uses the supplied book portrait. How I Build has no hero image or decorative dashboard.
+The homepage remains a minimal personal photographic opening with Explore Pectrium and Biography. Editorial serif content and compact system-font navigation sit on a neutral black default with an optional light appearance. The full monochrome About portrait retains its white canvas, desktop text placement and visible watermark.
 
-All private editorial information remains out of dist/. Only assets used by the site are copied. No product-level functionality or form was added.
+No company symbol has been invented: Pectrium uses a plain text company name pending an approved identity asset. No unconfirmed company website destination is rendered.
 
-Release: private review only. No merge or production promotion without explicit approval.
+editorial/, identity/, credentials and private archives are excluded from public commits and generated output. Noindex and existing Vercel Authentication are retained. Production releases are explicitly authorized in the current conversation; do not merge to main or change protection settings without authorization.
 
-
-## Original writing collection — 21 October 2026
-`src/articles.mjs` stores nine original editorials separately from layout, with explicit publication dates, summaries, topic labels, sections and source links. These dates record this publication, never the build clock. The generator produces a chronological index and nine /writing/:slug pages with a narrow reading column. Writing navigation remains current on article routes. The homepage contains no article previews.
-
-The legacy editorial archive remains private and ungenerated. Tests whitelist only the nine authorised article routes and reject accidental public editorial files. Total output is now 19 HTML pages including 404.
+Validation records distinguish static checks, DOM-model interactions, authenticated HTTP and actual local browser inspection. See the private editorial/VALIDATION.md for current limitations.
